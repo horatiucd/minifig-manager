@@ -55,3 +55,12 @@ It creates 4 files in /src/app:
 It updates 1 file:
 
 - app.module.ts
+
+### Add Minifig service
+
+Run `ng g s minifig` in the project folder.
+
+It creates 2 files in /src/app:
+
+- minifig.service.spec.ts
+- minifig.service.ts

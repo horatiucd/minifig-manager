@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Minifig} from '../minifig';
+import {MinifigService} from '../minifig.service';
 
 @Component({
   selector: 'app-minifig-list',
@@ -10,21 +11,15 @@ export class MinifigListComponent implements OnInit {
 
   minifigs: Minifig[];
 
-  constructor() { }
+  constructor(private minifigService: MinifigService) { }
 
   ngOnInit(): void {
-    this.minifigs = [
-      {
-        "id": 1,
-        "name": "Minifig 1",
-        "code": "abc-123"
-      },
-      {
-        "id": 2,
-        "name": "Minifig 2",
-        "code": "abc-456"
-      }
-      ];
+    this.getMinifigs();
   }
 
+  private getMinifigs() {
+    this.minifigService.getMinifigs().subscribe(data => {
+      this.minifigs = data;
+    });
+  }
 }
