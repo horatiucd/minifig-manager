@@ -25,6 +25,10 @@ export class MinifigListComponent implements OnInit {
     });
   }
 
+  viewMinifig(id: number) {
+    this.router.navigate(['view-minifig', id]);
+  }
+
   editMinifig(id: number) {
     this.router.navigate(['edit-minifig', id]);
   }

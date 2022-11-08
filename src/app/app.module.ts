@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddMinifigComponent } from './add-minifig/add-minifig.component';
 import { FormsModule} from '@angular/forms';
 import { EditMinifigComponent } from './edit-minifig/edit-minifig.component';
+import { ViewMinifigComponent } from './view-minifig/view-minifig.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MinifigListComponent,
     AddMinifigComponent,
-    EditMinifigComponent
+    EditMinifigComponent,
+    ViewMinifigComponent
   ],
   imports: [
     BrowserModule,

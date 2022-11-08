@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {MinifigService} from '../minifig.service';
 import {Minifig} from '../minifig';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-edit-minifig',
-  templateUrl: './edit-minifig.component.html',
-  styleUrls: ['./edit-minifig.component.css']
+  selector: 'app-view-minifig',
+  templateUrl: './view-minifig.component.html',
+  styleUrls: ['./view-minifig.component.css']
 })
-export class EditMinifigComponent implements OnInit {
+export class ViewMinifigComponent implements OnInit {
 
   id: number;
   minifig: Minifig;
 
   constructor(private minifigService: MinifigService,
-              private router: Router,
               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -25,10 +24,4 @@ export class EditMinifigComponent implements OnInit {
       error => console.log(error));
   }
 
-  onSubmit() {
-    this.minifigService.editMinifig(this.minifig).subscribe(data => {
-        this.router.navigate(['/minifigs']);
-    },
-      error => console.log(error));
-  }
 }
