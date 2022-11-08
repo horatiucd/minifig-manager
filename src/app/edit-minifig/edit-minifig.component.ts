@@ -18,7 +18,7 @@ export class EditMinifigComponent implements OnInit {
               private activetedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = this.activetedRoute.snapshot.params['id'];
+    this.id = this.activetedRoute.snapshot.params.id;
     this.minifig = this.minifigService.getMinifig(this.id).subscribe(data => {
       this.minifig = data;
     },

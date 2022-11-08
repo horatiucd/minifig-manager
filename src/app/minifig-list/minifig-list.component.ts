@@ -24,8 +24,15 @@ export class MinifigListComponent implements OnInit {
       this.minifigs = data;
     });
   }
-  
+
   editMinifig(id: number) {
     this.router.navigate(['edit-minifig', id]);
+  }
+
+  deleteMinifig(id: number) {
+    this.minifigService.deleteMinifig(id).subscribe(data => {
+      this.getMinifigs();
+    },
+      error => console.log(error));
   }
 }

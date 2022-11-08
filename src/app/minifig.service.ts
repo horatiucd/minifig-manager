@@ -27,4 +27,8 @@ export class MinifigService {
   editMinifig(minifig: Minifig): Observable<Object> {
     return this.httpClient.put(`${this.minifigsUrl}/${minifig.id}`, minifig);
   }
+
+  deleteMinifig(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.minifigsUrl}/${id}`);
+  }
 }
