@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Minifig} from '../minifig';
 import {MinifigService} from '../minifig.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-minifig-list',
@@ -11,7 +12,8 @@ export class MinifigListComponent implements OnInit {
 
   minifigs: Minifig[];
 
-  constructor(private minifigService: MinifigService) { }
+  constructor(private minifigService: MinifigService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.getMinifigs();
@@ -21,5 +23,9 @@ export class MinifigListComponent implements OnInit {
     this.minifigService.getMinifigs().subscribe(data => {
       this.minifigs = data;
     });
+  }
+  
+  editMinifig(id: number) {
+    this.router.navigate(['edit-minifig', id]);
   }
 }

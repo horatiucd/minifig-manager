@@ -16,7 +16,15 @@ export class MinifigService {
     return this.httpClient.get<Minifig[]>(`${this.minifigsUrl}`);
   }
 
+  getMinifig(id: number): Observable<Minifig> {
+    return this.httpClient.get<Minifig>(`${this.minifigsUrl}/${id}`);
+  }
+
   addMinifig(minifig: Minifig): Observable<Object> {
     return this.httpClient.post(`${this.minifigsUrl}`, minifig);
+  }
+
+  editMinifig(minifig: Minifig): Observable<Object> {
+    return this.httpClient.put(`${this.minifigsUrl}/${minifig.id}`, minifig);
   }
 }

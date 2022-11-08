@@ -5,6 +5,7 @@
       <th> Id </th>
       <th> Name </th>
       <th> Code </th>
+      <th> Actions </th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,9 @@
       <td>{{ minifig.id }}</td>
       <td>{{ minifig.name }}</td>
       <td>{{ minifig.code }}</td>
+      <td>
+        <button (click)="editMinifig(minifig.id)" class="btn btn-info"> Edit </button>
+      </td>
     </tr>
   </tbody>
 </table>
