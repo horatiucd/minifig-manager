@@ -64,3 +64,28 @@ It creates 2 files in /src/app:
 
 - minifig.service.spec.ts
 - minifig.service.ts
+
+### Manually configure routing
+
+- index.html - head shall contain - `<base href="/">`
+- create `app-routing.module.ts` in /src/app (AppRoutingModule)
+
+`import { NgModule } from '@angular/core';`
+
+`import { Routes, RouterModule} from '@angular/router';`
+
+`const routes: Routes = [];`
+
+`@NgModule({`
+
+`imports: [RouterModule.forRoot(routes)],`
+
+`exports: [RouterModule]`
+
+`})`
+
+`export class AppRoutingModule { }`
+
+- add AppRoutingModule in `app.module.ts`, under `@NgModule imports`
+- configure routing in the `app-routing.module.ts` in the `Routes` array
+- configure the router outlet directive in `app.component.html` - add `router-outlet` to update the templates to dinamically load components based on the URL path.
