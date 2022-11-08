@@ -31,3 +31,27 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Install Bootstrap
 
 Run `npm install bootstrap --save` in the project folder
+
+### Add Minifig class
+
+Run `ng g class minifig` in the project folder. 
+
+It creates 2 files in /src/app:
+
+- minifig.spec.ts
+- minifig.ts
+
+### Add Minifig list component
+
+Run `ng g c minifig-list` in the project folder.
+
+It creates 4 files in /src/app:
+
+- minifig-list/minifig-list.component.html
+- minifig-list/minifig-list.component.spec.ts
+- minifig-list/minifig-list.component.ts
+- minifig-list/minifig-list.component.css
+
+It updates 1 file:
+
+- app.module.ts

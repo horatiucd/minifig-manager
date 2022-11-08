@@ -1,0 +1,17 @@
+<h2> Minifig List </h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> Id </th>
+      <th> Name </th>
+      <th> Code </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let minifig of minifigs">
+      <td>{{ minifig.id }}</td>
+      <td>{{ minifig.name }}</td>
+      <td>{{ minifig.code }}</td>
+    </tr>
+  </tbody>
+</table>
