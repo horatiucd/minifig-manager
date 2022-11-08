@@ -21,13 +21,9 @@ export class AddMinifigComponent implements OnInit {
   addMinifig() {
     this.minifigService.addMinifig(this.minifig).subscribe(data => {
       console.log(data);
-      this.goToMinifigs();
+      this.router.navigate(['/minifigs']);
     },
     error => console.log(error));
-  }
-
-  goToMinifigs() {
-    this.router.navigate(['/minifigs']);
   }
 
   onSubmit() {
