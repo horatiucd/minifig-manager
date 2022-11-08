@@ -89,3 +89,12 @@ It creates 2 files in /src/app:
 - add AppRoutingModule in `app.module.ts`, under `@NgModule imports`
 - configure routing in the `app-routing.module.ts` in the `Routes` array
 - configure the router outlet directive in `app.component.html` - add `router-outlet` to update the templates to dinamically load components based on the URL path.
+
+### Add Minifig Component / Form
+
+Two way binding:
+
+- event binding (HTML template to component) 
+- data binding (component to HTML template)
+
+Issue `ng g c add-minifig` from the project folder.
