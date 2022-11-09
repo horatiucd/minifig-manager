@@ -11,20 +11,20 @@ import { EditMinifigComponent } from './edit-minifig/edit-minifig.component';
 import { ViewMinifigComponent } from './view-minifig/view-minifig.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MinifigListComponent,
-    AddMinifigComponent,
-    EditMinifigComponent,
-    ViewMinifigComponent
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    MinifigListComponent,
+    ViewMinifigComponent,
+    AddMinifigComponent,
+    EditMinifigComponent
+  ],
+  bootstrap: [AppComponent],
+  providers: []
 })
 export class AppModule { }
