@@ -4,11 +4,11 @@ import {MinifigService} from '../minifig.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-add-minifig',
-  templateUrl: './add-minifig.component.html',
-  styleUrls: ['./add-minifig.component.css']
+  selector: 'app-minifig-add',
+  templateUrl: './minifig-add.component.html',
+  styleUrls: ['./minifig-add.component.css']
 })
-export class AddMinifigComponent implements OnInit {
+export class MinifigAddComponent implements OnInit {
 
   minifig: Minifig = new Minifig();
 
@@ -21,7 +21,7 @@ export class AddMinifigComponent implements OnInit {
   addMinifig() {
     this.minifigService.addMinifig(this.minifig).subscribe(data => {
       console.log(data);
-      this.router.navigate(['/minifigs']);
+      this.router.navigate(['/minifig-list']);
     },
     error => console.log(error));
   }

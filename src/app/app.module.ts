@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MinifigListComponent } from './minifig-list/minifig-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AddMinifigComponent } from './add-minifig/add-minifig.component';
+import { MinifigAddComponent } from './minifig-add/minifig-add.component';
 import { FormsModule} from '@angular/forms';
-import { EditMinifigComponent } from './edit-minifig/edit-minifig.component';
-import { ViewMinifigComponent } from './view-minifig/view-minifig.component';
+import { MinifigEditComponent } from './minifig-edit/minifig-edit.component';
+import { MinifigViewComponent } from './minifig-view/minifig-view.component';
 
 @NgModule({
   imports: [
@@ -20,9 +20,9 @@ import { ViewMinifigComponent } from './view-minifig/view-minifig.component';
   declarations: [
     AppComponent,
     MinifigListComponent,
-    ViewMinifigComponent,
-    AddMinifigComponent,
-    EditMinifigComponent
+    MinifigViewComponent,
+    MinifigAddComponent,
+    MinifigEditComponent
   ],
   bootstrap: [AppComponent],
   providers: []

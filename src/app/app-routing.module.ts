@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
+import {MinifigAddComponent} from './minifig-add/minifig-add.component';
+import {MinifigEditComponent} from './minifig-edit/minifig-edit.component';
+import {MinifigViewComponent} from './minifig-view/minifig-view.component';
 import {MinifigListComponent} from './minifig-list/minifig-list.component';
-import {AddMinifigComponent} from './add-minifig/add-minifig.component';
-import {EditMinifigComponent} from './edit-minifig/edit-minifig.component';
-import {ViewMinifigComponent} from './view-minifig/view-minifig.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'minifigs', pathMatch: 'full'},
-  {path: 'minifigs', component: MinifigListComponent},
-  {path: 'view-minifig/:id', component: ViewMinifigComponent},
-  {path: 'add-minifig', component: AddMinifigComponent},
-  {path: 'edit-minifig/:id', component: EditMinifigComponent}
+  {path: '', redirectTo: 'minifig-list', pathMatch: 'full'},
+  {path: 'minifig-list', component: MinifigListComponent},
+  {path: 'minifig-view/:id', component: MinifigViewComponent},
+  {path: 'minifig-add', component: MinifigAddComponent},
+  {path: 'minifig-edit/:id', component: MinifigEditComponent}
 ];
 
 @NgModule({

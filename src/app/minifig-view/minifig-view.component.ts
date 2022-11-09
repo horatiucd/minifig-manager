@@ -4,11 +4,11 @@ import {Minifig} from '../minifig';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-view-minifig',
-  templateUrl: './view-minifig.component.html',
-  styleUrls: ['./view-minifig.component.css']
+  selector: 'app-minifig=details',
+  templateUrl: './minifig-view.component.html',
+  styleUrls: ['./minifig-view.component.css']
 })
-export class ViewMinifigComponent implements OnInit {
+export class MinifigViewComponent implements OnInit {
 
   id: number;
   minifig: Minifig;

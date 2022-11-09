@@ -97,4 +97,4 @@ Two way binding:
 - event binding (HTML template to component) 
 - data binding (component to HTML template)
 
-Issue `ng g c add-minifig` from the project folder.
+Issue `ng g c minifig-add` from the project folder.

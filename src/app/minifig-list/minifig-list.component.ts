@@ -26,11 +26,11 @@ export class MinifigListComponent implements OnInit {
   }
 
   viewMinifig(id: number) {
-    this.router.navigate(['view-minifig', id]);
+    this.router.navigate(['minifig-view', id]);
   }
 
   editMinifig(id: number) {
-    this.router.navigate(['edit-minifig', id]);
+    this.router.navigate(['minifig-edit', id]);
   }
 
   deleteMinifig(id: number) {

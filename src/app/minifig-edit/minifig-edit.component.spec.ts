@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditMinifigComponent } from './edit-minifig.component';
+import { MinifigEditComponent } from './minifig-edit.component';
 
 describe('EditMinifigComponent', () => {
-  let component: EditMinifigComponent;
-  let fixture: ComponentFixture<EditMinifigComponent>;
+  let component: MinifigEditComponent;
+  let fixture: ComponentFixture<MinifigEditComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditMinifigComponent ]
+      declarations: [ MinifigEditComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditMinifigComponent);
+    fixture = TestBed.createComponent(MinifigEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
