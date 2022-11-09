@@ -4,7 +4,7 @@ import {Minifig} from '../minifig';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-minifig=details',
+  selector: 'app-minifig-view',
   templateUrl: './minifig-view.component.html',
   styleUrls: ['./minifig-view.component.css']
 })
